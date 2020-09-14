@@ -1,0 +1,97 @@
+﻿<!DOCTYPE HTML>
+<!-- saved from url=(0099)https://e-report.neu.edu.cn/incoming/register2 -->
+<!DOCTYPE html PUBLIC "" ""><HTML lang="zh-CN"><HEAD><META content="IE=11.0000" 
+http-equiv="X-UA-Compatible">
+     
+<META charset="utf-8">     
+<META http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">     
+<META name="viewport" content="width=device-width, initial-scale=1">     
+<META name="csrf-token" content="laNjMw7Lsjy9FVeLL3z1nfU2EZPQUnX3uPWAmkYU">     
+<TITLE>东北大学测温验证平台</TITLE>    <LINK href="css\visitor.css" rel="stylesheet"> 
+<!-- <LINK href="东北大学测温验证平台_files/animate.min.css" rel="stylesheet"> -->
+    
+<STYLE>
+        @-webkit-keyframes pulse {
+            50% {
+                -webkit-transform: scale3d(1.2, 1.2, 1.2);
+                transform: scale3d(1.2, 1.2, 1.2);
+            }
+        }
+        @keyframes  pulse {
+            50% {
+                -webkit-transform: scale3d(1.2, 1.2, 1.2);
+                transform: scale3d(1.2, 1.2, 1.2);
+            }
+        }
+        .list-group {
+            padding: 1em;
+        }
+        .list-group-item {
+            font-size: 1.4em;
+            padding: 0.1em;
+            border: 0px;
+        }
+    </STYLE>
+ 
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001"></HEAD> 
+<BODY>
+<DIV id="app">
+<DIV class="card border-0 text-center" style="color: rgb(1, 101, 51);">
+<DIV class="card-body">
+<H2 class="card-title p-2">东北大学通行验证</H2>
+<DIV class="animated infinite pulse p-2"> 
+       <img src="img\222.png" />
+            </DIV>
+<P class="card-text p-2" style="font-size: 1.3em;">                时间：<font><span id="nowDateTimeSpan"></span></font>        </P></DIV></DIV>
+<UL class="list-group list-group-flush" style="background-color: rgb(1, 101, 51);">
+  <LI class="list-group-item bg-transparent text-white d-flex">
+  <DIV style="text-align-last: justify; min-width: 4em;">学工号</DIV>：
+  <DIV class="sid">1970636</DIV></LI>
+  <LI class="list-group-item bg-transparent text-white d-flex">
+  <DIV style="text-align-last: justify; min-width: 4em;">姓名</DIV>：
+  <DIV class="name">李江豪</DIV></LI>
+  <LI class="list-group-item bg-transparent text-white d-flex">
+  <DIV style="text-align-last: justify; min-width: 4em;">验证位置</DIV>：
+  <DIV class="door">南湖校区南门</DIV></LI>
+  <LI class="list-group-item bg-transparent text-white d-flex">
+  <DIV style="text-align-last: justify; min-width: 4em;">进出状态</DIV>：
+  <DIV>进入</DIV></LI></UL></DIV></BODY></HTML>
+<body onload="startTime()">
+         
+    </body>
+
+<script language="JavaScript">
+            function startTime()   
+            {   
+                var today=new Date();//定义日期对象   
+                var yyyy = today.getFullYear();//通过日期对象的getFullYear()方法返回年    
+                var MM = today.getMonth()+1;//通过日期对象的getMonth()方法返回年    
+                var dd = today.getDate();//通过日期对象的getDate()方法返回年     
+                var hh=today.getHours();//通过日期对象的getHours方法返回小时   
+                var mm=today.getMinutes();//通过日期对象的getMinutes方法返回分钟   
+                var ss=today.getSeconds();//通过日期对象的getSeconds方法返回秒   
+                // 如果分钟或小时的值小于10，则在其值前加0，比如如果时间是下午3点20分9秒的话，则显示15：20：09   
+                MM=checkTime(MM);
+                dd=checkTime(dd);
+                mm=checkTime(mm);   
+                ss=checkTime(ss);    
+                var day; //用于保存星期（getDay()方法得到星期编号）
+                if(today.getDay()==0)   day   =   "星期日 " 
+                if(today.getDay()==1)   day   =   "星期一 " 
+                if(today.getDay()==2)   day   =   "星期二 " 
+                if(today.getDay()==3)   day   =   "星期三 " 
+                if(today.getDay()==4)   day   =   "星期四 " 
+                if(today.getDay()==5)   day   =   "星期五 " 
+                if(today.getDay()==6)   day   =   "星期六 " 
+                document.getElementById('nowDateTimeSpan').innerHTML=yyyy+"-"+MM +"-"+ dd +" " + hh+":"+mm+":"+ss;   
+                <!--setTimeout('startTime()',1000);//每一秒中重新加载startTime()方法 -->
+            }   
+
+            function checkTime(i)   
+            {   
+                if (i<10){
+                    i="0" + i;
+                }   
+                  return i;
+            }  
+        </script>
